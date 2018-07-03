@@ -182,7 +182,7 @@ class IS(object):
                         if raw:
                             callback(line)
                         else:
-                            callback(self._parse(line))
+                            return callback(self._parse(line))
                     else:
                         self.logger.debug("Server: %s", line.decode('utf8'))
             except ParseError as exp:
