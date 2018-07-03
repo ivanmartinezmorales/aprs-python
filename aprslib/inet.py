@@ -180,9 +180,9 @@ class IS(object):
                 for line in self._socket_readlines(blocking):
                     if line[0:1] != b'#':
                         if raw:
-                            callback(line)
+                            return line
                         else:
-                            return callback(self._parse(line))
+                            return self._parse(line))
                     else:
                         self.logger.debug("Server: %s", line.decode('utf8'))
             except ParseError as exp:
