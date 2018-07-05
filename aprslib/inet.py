@@ -184,6 +184,7 @@ class IS(object):
                         else:
                             packet = self._parse(line)
                             return packet
+
                     else:
                         self.logger.debug("Server: %s", line.decode('utf8'))
             except ParseError as exp:
