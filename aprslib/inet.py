@@ -182,7 +182,9 @@ class IS(object):
                         if raw:
                             return line
                         else:
-                            return self._parse(line))
+                            packet = self._parse(line)
+                            return packet
+
                     else:
                         self.logger.debug("Server: %s", line.decode('utf8'))
             except ParseError as exp:
