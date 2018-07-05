@@ -14,7 +14,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
                         .replace('projects/aprs-python/badge/?version=latest', 'projects/aprs-python/badge/?version=stable')
 
 setup(
-    name='aprslib',
+    name='aprslib-copy',
     version=lib_version,
     description='Module for accessing APRS-IS and parsing APRS packets',
     long_description=long_description,
